@@ -206,7 +206,7 @@ input {
 
 .container1 {
     
-    display: block;
+    display: flex;
     flex-direction: column;
     padding-left: 30px;
     padding-top: 20px;
@@ -317,4 +317,32 @@ input {
 
 main p{
     font-size: 14px;
+}
+
+/* bloc activité */
+.carddisplayactivity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.activitycardsbloc {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 302px;
+    height: 445px;
+    border-radius: 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.activitycardsbloc img {
+    height: 389px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.activitycardsbloc h4 {
+    padding-left: 18px;
 }
