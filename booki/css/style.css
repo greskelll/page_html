@@ -12,7 +12,23 @@ ul {
 
 a {
     text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
 }
+
+h2 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size:18px;
+}
+
+p {
+    font-size: 16px;
+}
+
+
 
 /* couleurs de polices et fonds */
 
@@ -28,6 +44,13 @@ a {
     background-color: #F2F2F2;
 }
 
+.greyinside {
+    color: #F2F2F2;
+}
+
+.white {
+    background-color: #FFFFFF;
+}
 /* header */
 /* titre du site et menu de navigation */
 
@@ -46,8 +69,8 @@ a {
     border-top:transparent solid 2px;
     padding-top: 26px;
     margin-top: -24px;
-    padding-left:20px;
-    padding-right:20px;
+    padding-left:30px;
+    padding-right:30px;
 }
 
 .menuborder:hover {
@@ -65,6 +88,11 @@ h1 {
     width:61px;
     height:19px;
     margin-top:32px;
+}
+/* réduction line heigth slogan */
+
+.catchphrase {
+    line-height: 12px;
 }
 
 /* onglet filtres */
@@ -206,11 +234,11 @@ input {
 }
 
 .carte img {
-    width: 238px;
-    height: 118px;
+    width: 236px;
+    height: 116px;
     object-fit: cover;
-    padding-left: 4px;
-    padding-top: 4px;
+    padding-left: 5px;
+    padding-top: 5px;
     margin-bottom: -8px;
     border-radius: 20px;      
 }
@@ -250,11 +278,11 @@ input {
 }
 
 .popularcontainer img {
-    width: 129px;
-    height: 136px;
+    width: 127px;
+    height: 134px;
     object-fit: cover;
     border-radius: 20px 0 0 20px;
-    padding:4px;
+    padding:5px;
 }
 .popularcontainer :nth-child(2){
     margin-top: -20px;
@@ -270,13 +298,23 @@ input {
 }
 
 .containeralt h4{
-    font-size:19px;
+    font-size:16px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
 }
 
 .containeralt :nth-child(3){
-    margin-top: 18px;
+    margin-top: 16px;
+
 }
 
 .fa-chart-line{
     padding: 25px 10px 10px 10px;
+}
+
+/* police <p> dans carte plus petite */
+
+main p{
+    font-size: 14px;
 }
