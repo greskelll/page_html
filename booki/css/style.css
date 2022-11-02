@@ -4,7 +4,8 @@ body {
     max-width:1400px;
     margin: auto;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
+        
 }
 
 ul {
@@ -63,6 +64,7 @@ li {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    max-width:1339px;
 }
 
 .menu {
@@ -107,6 +109,7 @@ h1 {
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
+    max-width:1339px;
 }
 
         /* duplication classe pour le changement du site en mobile */
@@ -275,6 +278,7 @@ input {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    max-width:1339px;
 }
 
 /* bloc les plus populaires */
@@ -334,6 +338,7 @@ main p{
 /* bloc activité */
 .activity {
     margin-top: 40px;
+    max-width:1339px;
 }
 
 .carddisplayactivity {
@@ -366,10 +371,9 @@ main p{
 /* footer */
 
 footer {
-    align-self: center;  /* main en display flex pour align self du footer */
     display: flex;
     flex-direction: row;
-    width:1339px;
+    max-width:1339px;
     height:225px;
     margin-top: 60px;
     justify-content: flex-start;
