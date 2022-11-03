@@ -13,13 +13,6 @@ ul {
     list-style-type: none;
 }
 
-main a {
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 700;
-    color: black;
-}
-
 h2 {
     font-size: 22px;
 }
@@ -36,7 +29,16 @@ li {
     font-size: 17px;
 }
 
-/* couleurs de polices et fonds */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.padleft {                  /*correction padding auto*/
+    padding-left: 32px;
+}
+
+/* couleurs , polices et fonds */
 
 .darkblue {
     color:#0065FC;
@@ -57,6 +59,10 @@ li {
 .white {
     background-color: #FFFFFF;
 }
+
+.bold {
+    font-weight: 700;
+}
 /* header */
 /* titre du site et menu de navigation */
 
@@ -76,13 +82,16 @@ li {
     border-top:transparent solid 2px;
     padding-top: 26px;
     margin-top: -16px;
-    padding-left:30px;
     padding-right:30px;
 }
 
 .menuborder:hover {
     border-top:#0065FC solid 2px;
     color:#0065FC;
+}
+
+.menuborder:hover a{
+    color:#0065FC
 }
 
 h1 {
@@ -221,24 +230,21 @@ input {
     
     display: flex;
     flex-direction: column;
-    padding-top: 20px;
+    padding:20px;
     border-radius: 12px;
     margin-top:20px;
     max-width: 64%;
-}
+} 
 
-.container1 h2, a {
-    padding-left: 32px;     /* alignement avec les cartes */
-}
 .container2 {
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 20px;
+
+    padding:20px;
     border-radius: 12px;
     margin-top: 20px;
-    width: 26%;
- 
+    width: 26%; 
 }
+
+
 .carte{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
     width: 246px;
@@ -246,16 +252,17 @@ input {
     line-height: 2px;
     border-radius: 20px;
     margin-bottom: 36px;
+    
 }
 
 .carte img {
     width: 236px;
     height: 116px;
     object-fit: cover;
-    padding-left: 5px;
     padding-top: 5px;
     margin-bottom: -8px;
-    border-radius: 20px 20px 0 0;      
+    border-radius: 20px 20px 0 0; 
+    padding-left: 5px;     
 }
 .container {
     padding: 2px 16px;
@@ -291,6 +298,7 @@ input {
     display:flex;
     flex-direction: row;
     margin-bottom: 28px;
+
 }
 
 .popularcontainer img {
@@ -384,19 +392,17 @@ footer {
 .footerblock{
     display: flex;
     flex-direction: column;
-    padding-right: 130px;
-    padding-left: 70px;
+    width: 446px;
+    padding-left: 30px;
 }
 
 .footerblock h3{
-    padding-left: 32px;
+    margin-left: 32px;
 }
 
 .footerblock a {
    font-size: 16px;
    font-weight:normal;
-   text-decoration: none;
-   color: black;
    padding-top: 10px;
    
 }
