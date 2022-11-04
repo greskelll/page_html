@@ -119,6 +119,7 @@ h1 {
     align-items: center;
     flex-direction: row;
     max-width:1339px;
+    
 }
 
         /* duplication classe pour le changement du site en mobile */
@@ -127,22 +128,22 @@ h1 {
     display:flex;
     justify-content: flex-start;
     align-items: center;
-    flex-direction: row;       
+    flex-direction: row;
+
 }
 
 .roundborder {
 border: 2px solid #D9D9D9;
 border-radius: 25px;
-padding-left: 25px;
-padding-right: 25px;
-padding-bottom: 15px;
-padding-top: 15px;
+padding-left: 24px;
+padding-right: 24px;
+padding-bottom: 12px;
+padding-top: 12px;
 font-weight: bold;
-margin-right:20px;
-margin-left: 20px;
 display: flex; /* prévient saut à la ligne icone/texte en cas de zoom excessif */
 justify-content: center;
 align-items: center;
+margin-right:25px ;
 }
 
         /* création css pour intégration icone dans cercle car fa-stack ne fonctionne pas avec -thin et -light pour l'icone information */
@@ -233,7 +234,7 @@ input {
     padding:20px;
     border-radius: 12px;
     margin-top:20px;
-    max-width: 64%;
+    max-width: 62%;
 } 
 
 .container2 {
@@ -241,7 +242,7 @@ input {
     padding:20px;
     border-radius: 12px;
     margin-top: 20px;
-    width: 26%; 
+    max-width: 34%; 
 }
 
 
@@ -270,6 +271,7 @@ input {
 
 .rating {
     font-size: 12px;
+
 }
 
 .carddisplay {
@@ -308,14 +310,12 @@ input {
     border-radius: 20px 0 0 20px;
     padding:5px;
 }
-.popularcontainer :nth-child(2){
-    margin-top: -20px;
-}
+
 
 .containeralt {
     display: flex;
     flex-direction: column; 
-    justify-content: flex-start;
+    justify-content: space-between;
     margin: auto;
     width: 180px;
     height: 136px;    
@@ -323,15 +323,17 @@ input {
 
 .containeralt h4{
     font-size:16px;
-    padding-top: 15px;
-    padding-right: 15px;
-    padding-bottom: 5px;
+    margin: 6px;
 }
 
-.containeralt :nth-child(3){
-    margin-top: 16px;
-
+.containeralt p{
+    margin: 6px;
 }
+
+.containeralt .rating{
+    margin-bottom: 4px;
+}
+
 
 .fa-chart-line{
     padding: 25px 10px 10px 10px;
@@ -352,17 +354,17 @@ main p{
 .carddisplayactivity {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 .activitycardsbloc {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
-    width: 302px;
-    height: 445px;
+    max-width: 302px;
+    max-height: 445px;
     border-radius: 20px;
     display:flex;
     flex-direction: column;
-    justify-content: center;
+    margin-bottom: 35px;
 
 }
 
@@ -374,6 +376,8 @@ main p{
 
 .activitycardsbloc h4 {
     padding-left: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /* footer */
@@ -405,4 +409,57 @@ footer {
    font-weight:normal;
    padding-top: 10px;
    
+}
+
+/* adaptativescreen */
+
+@media screen and (max-width: 992px)
+{
+
+   .activityandaccommodation{
+        flex-direction: column;
+       
+    }
+
+    .container1, .container2 {
+        max-width: 992px;
+    
+    }
+    
+    .rowtest {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .popularcontainer {
+        max-width: 31%;
+    }
+    .popularcontainer img {
+        width: 106px;
+    }
+
+    /* bloc activité plus petit pour tout mettre en une ligne */
+
+    .activitycardsbloc {
+        width: 182px;
+        height: 262px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+
+        
+        
+    }
+
+    .activitycardsbloc img {
+        height: 211px;
+        object-fit: cover;
+
+    }
+
+    .activitycardsbloc h4 {
+    margin-top: auto;
+    margin-bottom: auto;
+
+    }
+ 
 }
