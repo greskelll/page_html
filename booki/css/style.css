@@ -413,6 +413,8 @@ footer {
 
 /* adaptativescreen */
 
+    /* Tablette */
+
 @media screen and (max-width: 992px)
 {
 
@@ -462,4 +464,41 @@ footer {
 
     }
  
+}
+
+    /* Smartphone */
+
+@media screen and (max-width: 768px) {
+
+   .headertop {
+    flex-direction: column;
+    align-items: center;
+   }
+
+   .desktopfirst {
+    visibility: hidden;
+   }
+
+   .mobilefirst {
+    visibility: visible;
+   }
+
+   .activityandaccommodation {
+    flex-direction: column-reverse;
+   }
+
+   .rowtest {
+    flex-direction: column;
+   }
+
+   .activity {
+    display: flex;
+    flex-direction: column;  /* retravailler pour affichage en collonne sans margin */
+    margin: 50px;
+   }
+
+   footer {
+    flex-direction: column;
+    height: fit-content;
+   }
 }
