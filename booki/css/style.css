@@ -99,6 +99,9 @@ h1 {
 }
 .hidden {
     visibility: hidden;
+    width:0;
+    height: 0;
+
 }
 .logo {
     width:61px;
@@ -108,7 +111,7 @@ h1 {
 /* réduction line heigth slogan */
 
 .catchphrase {
-    margin:0;
+    margin:auto;
 }
 
 /* onglet filtres */
@@ -470,12 +473,16 @@ footer {
 
 @media screen and (max-width: 768px) {
 
- 
+    body {
+        width: 103%;
+        margin: auto;
+        
+    }
 
    .headertop {
     flex-direction: column;
     align-items: center;
-
+    
    }
 
    .desktopfirst {
@@ -496,7 +503,7 @@ footer {
 
    .activity {
     display: flex;
-    flex-direction: column;  /* retravailler pour affichage en collonne sans margin */
+    flex-direction: column;  /* retravailler pour affichage en colonne sans margin */
     margin: 50px;
    }
 
@@ -504,18 +511,21 @@ footer {
     flex-direction: column;
     height: fit-content;
    }
+
+
+   /* menu nav*/
   
    .menuborder {                         
 
-    border-bottom:transparent solid 2px;
+    border-bottom:transparent solid 3px;
     border-top: none;
-    padding: 0;
+    padding: 0 0 30px 0;
     margin: 0;
 
     }
 
     .menuborder:hover {
-    border-bottom:#0065FC solid 2px;
+    border-bottom:#0065FC solid 3px;
     color:#0065FC;
     border-top: none;
  
@@ -553,12 +563,16 @@ footer {
         padding-left: 0;
     }
 
-    body {
-        width: 103%;
-        padding: 0;
-        margin: 0;
+    /* slogan */
+
+    .catchphrase {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
+   
+    /* onglet recherche */
  
 
     .formborderright { 
@@ -575,4 +589,10 @@ footer {
         width: 42px;
         font-size:18px;
     }
+
+    .horizontalform {
+        justify-content: center;
+    }
+
+
 }
