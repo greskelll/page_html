@@ -111,7 +111,7 @@ h1 {
 /* réduction line heigth slogan */
 
 .catchphrase {
-    margin:auto;
+    margin:32px;
 }
 
 /* onglet filtres */
@@ -147,6 +147,7 @@ display: flex; /* prévient saut à la ligne icone/texte en cas de zoom excessif
 justify-content: center;
 align-items: center;
 margin-right:25px ;
+margin-bottom: 20px;
 }
 
         /* création css pour intégration icone dans cercle car fa-stack ne fonctionne pas avec -thin et -light pour l'icone information */
@@ -499,6 +500,8 @@ footer {
 
    .rowtest {
     flex-direction: column;
+    align-items: center;
+    
    }
 
    .activity {
@@ -592,6 +595,23 @@ footer {
 
     .horizontalform {
         justify-content: center;
+    }
+
+    .popularcontainer {
+        max-width: 90%;
+    }
+
+    .filtres {
+        flex-direction: column;
+    }
+
+    .ongletsfiltres {
+        flex-wrap: wrap;
+    }
+
+    .roundborder:hover {
+        background: #ffffff;
+        box-shadow: 0 3px 3px 3px #F2F2F2;    
     }
 
 
