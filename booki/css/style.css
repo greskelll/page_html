@@ -109,10 +109,10 @@ h1 {
     height:19px;
     margin-top:32px;
 }
-/* réduction line heigth slogan */
+/* slogan */
 
 .catchphrase {
-    margin:32px;
+    margin:0;
 }
 
 /* onglet filtres */
@@ -241,7 +241,11 @@ input {
     border-radius: 12px;
     margin-top:20px;
     max-width: 62%;
-} 
+}
+
+.container1 :nth-child(3) {
+    font-size: 18px;
+}
 
 .container2 {
 
@@ -366,7 +370,7 @@ main p{
 .carddisplayactivity {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 .activitycardsbloc {
@@ -577,9 +581,10 @@ footer {
     /* slogan */
 
     .catchphrase {
+        margin: 16px;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
     }
 
    
