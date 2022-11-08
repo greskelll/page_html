@@ -298,6 +298,12 @@ input {
 
 /* bloc les plus populaires */
 
+.populartop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .popularcontainer{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
     width: 343px;
@@ -600,8 +606,11 @@ footer {
     }
 
     .popularcontainer {
-        max-width: 90%;
+        max-width: 99%;
+        margin-bottom: 10px;
     }
+
+    /* partie filtres*/
 
     .filtres {
         flex-direction: column;
@@ -617,13 +626,34 @@ footer {
         flex-wrap: wrap;
     }
 
+    .roundborder {
+    border: 2px solid #D9D9D9;
+    border-radius: 25px;
+    padding:auto;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    width: 30%;
+    height:25px;
+    font-size: 12px;
+    }
+
+    .roundborder i {
+        font-size: 20px;
+        padding-right: 8px;
+    }
+
     .roundborder:hover {
         background: #ffffff;
         box-shadow: 0 3px 3px 3px #F2F2F2;    
     }
 
     .carte {
-        width: 90%;
+        width: 95%;
+        margin-bottom: 10px;
     }
 
     .carte img {
@@ -652,6 +682,19 @@ footer {
 
     .container1 {
         background-color: #FFFFFF;
+        margin-top: 0;
+        border-radius:0 0 0 0;
     }
+
+    .container2 {
+        border-radius:0 0 0 0;
+        
+    }
+
+    .activity {
+        margin: 0;
+    }
+
+    
 
 }
