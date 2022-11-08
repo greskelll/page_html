@@ -34,6 +34,16 @@ a {
     color: black;
 }
 
+button {                    /* harmonise le bouton du formulaire avec le reste */
+	background: none;
+	color: inherit;
+	border: none;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+
+}
+
 .padleft {                  /*correction padding auto*/
     padding-left: 32px;
 }
@@ -89,10 +99,12 @@ a {
 .menuborder:hover {
     border-top:#0065FC solid 2px;
     color:#0065FC;
+    transition: 0.3s ease-in-out;
 }
 
 .menuborder:hover a{
-    color:#0065FC
+    color:#0065FC;
+    transition:0.3s ease-in-out
 }
 
 h1 {
@@ -113,6 +125,13 @@ h1 {
 
 .catchphrase {
     margin:0;
+}
+
+.catchphrase :nth-child(1){
+    margin-bottom: 5px;
+}
+.catchphrase :nth-child(2){
+    margin: 5px;
 }
 
 /* onglet filtres */
@@ -164,7 +183,8 @@ margin-bottom: 20px;
 }
 
 .roundborder:hover {
-    background: #DEEBFF;    
+    background: #DEEBFF;
+    transition: 0.4s ease-in-out;    
 }
 
 .iconaway {
@@ -243,7 +263,7 @@ input {
     max-width: 62%;
 }
 
-.container1 :nth-child(3) {
+.afficherplus {
     font-size: 18px;
 }
 
@@ -653,7 +673,8 @@ footer {
 
     .roundborder:hover {
         background: #ffffff;
-        box-shadow: 0 3px 3px 3px #F2F2F2;    
+        box-shadow: 0 2px 2px 2px #00000025;
+        transition: box-shadow 0.3s ease-in-out;    /* effet de transition pour rendu dynamique */
     }
 
     .carte {
@@ -700,6 +721,19 @@ footer {
         margin: 0;
     }
 
-    
+    #activites {
+        margin-left: 32px;
+    }
+
+    /* footer mobile */
+
+    .footerblock {
+        width:100%;
+        margin:20px 0 0 40px;
+    }
+
+    .footerblock h3 {
+        margin: 25px 0 10px 0;
+    }
 
 }
