@@ -340,7 +340,7 @@ input {
 }
 
 .popularcontainer img {
-    width: 127px;
+    width: 40%;
     height: 134px;
     object-fit: cover;
     border-radius: 20px 0 0 20px;
@@ -395,8 +395,8 @@ main p{
 }
 .activitycardsbloc {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
-    max-width: 302px;
-    max-height: 445px;
+    width: 302px;
+    height: 445px;
     border-radius: 20px;
     display:flex;
     flex-direction: column;
@@ -412,8 +412,7 @@ main p{
 
 .activitycardsbloc h4 {
     padding-left: 18px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0 20px 0;
 }
 
 /* footer */
@@ -451,7 +450,7 @@ footer {
 
     /* Tablette */
 
-@media screen and (max-width: 992px)
+@media screen and (max-width: 992px) and (min-width:769px)
 {
 
    .activityandaccommodation{
@@ -471,10 +470,10 @@ footer {
     }
 
     .popularcontainer {
-        max-width: 31%;
+        width: 90%;
     }
     .popularcontainer img {
-        width: 106px;
+        width: 40%;
     }
 
     /* bloc activité plus petit pour tout mettre en une ligne */
@@ -495,8 +494,8 @@ footer {
     }
 
     .activitycardsbloc h4 {
-    margin-top: auto;
-    margin-bottom: auto;
+    margin:25px 0 25px 0;
+    
 
     }
  
@@ -531,8 +530,10 @@ footer {
    }
 
    .rowtest {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    margin:0;
     
    }
 
@@ -594,14 +595,12 @@ footer {
 
     }
     
-    .padleft {
-        padding-left: 0;
-    }
+ 
 
     /* slogan */
 
     .catchphrase {
-        margin: 16px;
+        margin: 0 24px 0 24px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -628,11 +627,14 @@ footer {
 
     .horizontalform {
         justify-content: center;
+        max-width: 90%;
+        margin: auto;
     }
 
     .popularcontainer {
-        max-width: 99%;
-        margin-bottom: 10px;
+        width: 90%;
+        margin:0 0 10px 0;
+        
     }
 
     /* partie filtres*/
@@ -644,11 +646,13 @@ footer {
 
     .filtres h3{
         align-self: flex-start;
-        padding-left: 45px;
+        padding-left: 24px;
     }
 
     .ongletsfiltres {
         flex-wrap: wrap;
+        padding-left: 10px;
+        justify-content: space-around;
     }
 
     .roundborder {
@@ -677,7 +681,7 @@ footer {
     }
 
     .carte {
-        width: 95%;
+        width: 90%;
         margin-bottom: 10px;
     }
 
@@ -709,16 +713,17 @@ footer {
         background-color: #FFFFFF;
         margin-top: 0;
         border-radius:0 0 0 0;
+        min-width: 100%;
+        padding: 0;
     }
 
     .container2 {
         border-radius:0 0 0 0;
+        min-width: 100%;
+        padding: 0;
         
     }
 
-    .activity {
-        margin: 0;
-    }
 
     #activites {
         margin-left: 32px;
@@ -733,6 +738,10 @@ footer {
 
     .footerblock h3 {
         margin: 25px 0 10px 0;
+    }
+
+    .populartop {
+        margin:0 40px 0 26px;
     }
 
 }
