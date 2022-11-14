@@ -4,21 +4,27 @@ body {
     margin: auto;
     display: flex;
     flex-direction: column;
+    position: relative
         
 }
 
-/* prévient le scroll horizontal pour les différentes tailles d'écran */
+/* prevent horizontal scrolling */
 
 html, body {
   overflow-x: hidden;
 }
-body {
-  position: relative
-}
+
+/* prevent horizontal scrolling */
+
+/* font */
 
 ul {
 
     list-style-type: none;
+}
+
+h1 {
+    font-family: 'Sulphur Point', sans-serif;
 }
 
 h2 {
@@ -33,8 +39,15 @@ p {
     font-size: 16px;
 }
 
+main p{
+    font-size: 14px;
+}
+
 li {
     font-size: 17px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;  /* prevent container stretch from long sentences */
 }
 
 a {
@@ -42,7 +55,15 @@ a {
     color: black;
 }
 
-button {                    /* harmonise le bouton du formulaire avec le reste */
+.rating {
+    font-size: 12px;
+}
+
+/* font */
+
+/* harmonize button with the form */
+
+button {                   
 	background: none;
 	color: inherit;
 	border: none;
@@ -52,11 +73,17 @@ button {                    /* harmonise le bouton du formulaire avec le reste *
 
 }
 
-.padleft {                  /*correction padding auto*/
+/* harmonize button with the form */
+
+/*correction for some auto-padding*/
+
+.padleft {                 
     padding-left: 32px;
 }
 
-/* couleurs , polices et fonds */
+/*correction for some auto-padding*/
+
+/* colors */
 
 .darkblue {
     color:#0065FC;
@@ -81,8 +108,12 @@ button {                    /* harmonise le bouton du formulaire avec le reste *
 .bold {
     font-weight: 700;
 }
+
+/* colors */
+
 /* header */
-/* titre du site et menu de navigation */
+
+    /* site title and nav menu */
 
 .headertop {
     display: flex;
@@ -116,9 +147,7 @@ button {                    /* harmonise le bouton du formulaire avec le reste *
     transition:0.3s ease-in-out
 }
 
-h1 {
-    font-family: 'Sulphur Point', sans-serif;
-}
+
 .hidden {
     visibility: hidden;
     width:0;
@@ -130,7 +159,10 @@ h1 {
     height:19px;
     margin-top:32px;
 }
-/* slogan */
+
+/* header */
+
+/* catchphrase */
 
 .catchphrase {
     margin:0;
@@ -143,64 +175,9 @@ h1 {
     margin: 5px;
 }
 
-/* onglet filtres */
+/* catchphrase */
 
-.filtres {
-    display:flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: row;
-    max-width:1339px;
-    
-}
-
-        /* duplication classe pour le changement du site en mobile */
-
-.ongletsfiltres {
-    display:flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: row;
-
-}
-
-.roundborder {
-border: 2px solid #D9D9D9;
-border-radius: 25px;
-padding-left: 24px;
-padding-right: 24px;
-padding-bottom: 12px;
-padding-top: 12px;
-font-weight: bold;
-display: flex; /* prévient saut à la ligne icone/texte en cas de zoom excessif */
-justify-content: center;
-align-items: center;
-margin-right:25px ;
-}
-
-        /* création css pour intégration icone dans cercle car fa-stack ne fonctionne pas avec -thin et -light pour l'icone information */
-
-.smallroundborder {
-    border: 1px solid #D9D9D9;
-    border-radius: 25px;
-    padding-top: 6px;
-    padding-right: 12px;
-    padding-bottom: 7px;
-    padding-left: 12px;
-    margin-right:10px;
-}
-
-.roundborder:hover {
-    background: #DEEBFF;
-    transition: 0.4s ease-in-out;    
-}
-
-.iconaway {
-    margin-right: 10px;
-}
-
-
-/* Formulaire de recherche */
+/* Research form */
 
 .horizontalform {
     display: flex;
@@ -216,7 +193,7 @@ margin-right:25px ;
     background-color: #F2F2F2;
     width: 50px;
     line-height: 50%;
-    padding-top: 17px;     /* height:49px icon bloquée en haut? utilisation padding*/
+    padding-top: 17px;
     padding-bottom: 16px;
     font-size:18px;
 }
@@ -249,8 +226,6 @@ input {
     font-family: 'Raleway', sans-serif;
 }
 
-        /*bouton recherche desktop*/
-
 .desktopfirst {
     visibility: visible ;
 }
@@ -258,8 +233,69 @@ input {
     visibility: hidden;
 }
 
-/* conteneur cartes */
+/* Research form */
 
+/* filters */
+
+.filters {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    max-width:1339px;
+    
+}
+
+        /* class duplication for responsive */
+
+.filtertab{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.roundborder {
+border: 2px solid #D9D9D9;
+border-radius: 25px;
+padding-left: 24px;
+padding-right: 24px;
+padding-bottom: 12px;
+padding-top: 12px;
+font-weight: bold;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-right: 25px;
+}
+
+.roundborder:hover {
+    background: #DEEBFF;
+    transition: 0.4s ease-in-out;    
+}
+
+.iconaway {
+    margin-right: 10px;
+}
+
+/* filters */
+
+/*css to put icon in a circle because fa-stack is not working with -thin et -light information icon ( not a free option ) */
+
+.smallroundborder {
+    border: 1px solid #D9D9D9;
+    border-radius: 25px;
+    padding-top: 6px;
+    padding-right: 12px;
+    padding-bottom: 7px;
+    padding-left: 12px;
+    margin-right:10px;
+}
+
+/*css to put icon in a circle because fa-stack is not working with -thin et -light information icon */
+
+/* cards containers 1 and 2 (activity and accomodation) */
 
 .container1 {
     
@@ -271,7 +307,7 @@ input {
     max-width: 62%;
 }
 
-.afficherplus {
+.showmore {
     font-size: 18px;
 }
 
@@ -284,17 +320,16 @@ input {
 }
 
 
-.carte{
+.card{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
     width: 246px;
     height: 199px;
     line-height: 2px;
     border-radius: 20px;
-    margin-bottom: 36px;
-    
+    margin-bottom: 36px;    
 }
 
-.carte img {
+.card img {
     width: 236px;
     height: 116px;
     object-fit: cover;
@@ -305,30 +340,26 @@ input {
 }
 .container {
     padding: 2px 16px;
-  }
-
-.rating {
-    font-size: 12px;
-
 }
 
 .carddisplay {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-         
+    justify-content: space-around;         
 }
 
-/* bloc activityandaccommodation pour display desktop en row */
+/* cards containers 1 and 2 (activity and popular) */
 
-.activityandaccommodation{
+/* container popular and accommodation for responsive display */
+
+.activityandpopular{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     max-width:1339px;
 }
 
-/* bloc les plus populaires */
+    /* "most popular" container */
 
 .populartop {
     display: flex;
@@ -382,14 +413,10 @@ input {
 .fa-chart-line{
     padding: 25px 10px 10px 10px;
 }
+/* cards containers 1 and 2 ( activity and popular)*/
 
-/* police <p> dans carte plus petite */
+/* activity container */
 
-main p{
-    font-size: 14px;
-}
-
-/* bloc activité */
 .activity {
     margin-top: 40px;
     max-width:1339px;
@@ -423,6 +450,8 @@ main p{
     margin: 10px 0 20px 0;
 }
 
+/* activity container */
+
 /* footer */
 
 footer {
@@ -454,21 +483,26 @@ footer {
    
 }
 
-/* adaptativescreen */
+/* activity container */
 
-    /* Tablette */
+/* responsive */
+
+    /* Tablet */
 
 @media screen and (max-width: 992px) and (min-width:769px)
 {
-
-   .activityandaccommodation{
-        flex-direction: column;
-       
+    ul.filtertab{
+        padding-left: 10px;
+    }
+    .roundborder{
+        margin-right: 16px;
+    }
+    .activityandpopular{
+        flex-direction: column;       
     }
 
     .container1, .container2 {
-        max-width: 992px;
-    
+        max-width: 992px;    
     }
     
     .rowtest {
@@ -484,30 +518,26 @@ footer {
         width: 40%;
     }
 
-    /* bloc activité plus petit pour tout mettre en une ligne */
-
     .activitycardsbloc {
-        width: 182px;
-        height: 262px;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
-
-        
-        
+        width: 24vh;
+        height: 34vh;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);    
     }
 
     .activitycardsbloc img {
-        min-height: 211px;
+        height: 28vh;
         object-fit: cover;
-
+        margin:0 0 1vh 0;
     }
 
     .activitycardsbloc h4 {
-    margin:auto;
-    min-height: 40px;  
-
-    }
- 
+    margin:0;
+    height: 5vh;
+    font-size: 16px;
+    } 
 }
+
+    /* Tablet */
 
     /* Smartphone */
 
@@ -515,15 +545,13 @@ footer {
 
     body {
         width: 103%;
-        margin: auto;
-        
+        margin: auto;        
     }
 
    .headertop {
     flex-direction: column;
     align-items: center;
-    margin-bottom: 0;
-    
+    margin-bottom: 0;    
    }
 
    .desktopfirst {
@@ -534,7 +562,7 @@ footer {
     visibility: visible;
    }
 
-   .activityandaccommodation {
+   .activityandpopular {
     flex-direction: column-reverse;
    }
 
@@ -542,13 +570,12 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin:0;
-    
+    margin:0;    
    }
 
    .activity {
     display: flex;
-    flex-direction: column;  /* retravailler pour affichage en colonne sans margin */
+    flex-direction: column;
     margin: 25px;
    }
 
@@ -557,8 +584,7 @@ footer {
     height: fit-content;
    }
 
-
-   /* menu nav*/
+   /* nav menu */
   
    .menuborder {                         
 
@@ -566,7 +592,6 @@ footer {
     border-top: none;
     padding: 0 0 30px 0;
     margin: 0;
-
     }
 
     .menuborder:hover {
@@ -580,20 +605,17 @@ footer {
         display: flex;
         width: 100%;
         align-items: stretch;
-        justify-content: center;
-            
+        justify-content: center;            
     }
 
     .menu {
         align-content: stretch;
         width: 100%;
         margin: 0;
-        padding: 0;
-        
+        padding: 0;        
     }
     
-    .menu :nth-child(1){
-    
+    .menu :nth-child(1){    
         width: 50%;
         text-align: center;
     }
@@ -601,7 +623,6 @@ footer {
     .menu :nth-child(2){
         width: 50%;
         text-align: center;
-
     }
     
  
@@ -616,7 +637,7 @@ footer {
     }
 
    
-    /* onglet recherche */
+    /* research tab */
  
 
     .formborderright { 
@@ -641,24 +662,22 @@ footer {
     }
 
     .popularcontainer {
-        width: 90%;
-        margin:0 0 10px 0;
-        
+        width: 80vw;
+        margin:0 0 10px 0;        
     }
 
-    /* partie filtres*/
+    /* filters*/
 
-    .filtres {
-        flex-direction: column;
-        
+    .filters {
+        flex-direction: column;        
     }
 
-    .filtres h3{
+    .filters h3{
         align-self: flex-start;
         padding-left: 24px;
     }
 
-    .ongletsfiltres {
+    .filtertab {
         flex-wrap: wrap;
         padding-left: 10px;
         justify-content: space-around;
@@ -686,25 +705,24 @@ footer {
     .roundborder:hover {
         background: #ffffff;
         box-shadow: 0 2px 2px 2px #00000025;
-        transition: box-shadow 0.3s ease-in-out;    /* effet de transition pour rendu dynamique */
+        transition: box-shadow 0.3s ease-in-out;  
     }
 
-    .carte {
-        width: 90%;
+    .card {
+        width: 80vw;
         margin-bottom: 10px;
     }
 
-    .carte img {
+    .card img {
         width:97%;
     }
 
-    /* bloc activité*/
+    /* activity container */
 
     .carddisplayactivity {
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-       
+        align-items: center;       
     }
 
     .activitycardsbloc {
@@ -729,11 +747,10 @@ footer {
     .container2 {
         border-radius:0 0 0 0;
         min-width: 100%;
-        padding: 0;
-        
+        padding: 0;        
     }
 
-    /* footer mobile */
+        /* mobile footer*/
 
     .footerblock {
         width:100%;
@@ -751,5 +768,8 @@ footer {
     .footerblock a {
         padding-left: 0;
     }
+    
+        /* mobile footer*/
 
+    /* Smartphone */
 }
