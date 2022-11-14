@@ -295,7 +295,7 @@ margin-right: 25px;
 
 /*css to put icon in a circle because fa-stack is not working with -thin et -light information icon */
 
-/* cards containers 1 and 2 (activity and accomodation) */
+/* cards containers 1 and 2 (popular and accomodation) */
 
 .container1 {
     
@@ -348,11 +348,11 @@ margin-right: 25px;
     justify-content: space-around;         
 }
 
-/* cards containers 1 and 2 (activity and popular) */
+/* cards containers 1 and 2 (accomodation and popular) */
 
 /* container popular and accommodation for responsive display */
 
-.activityandpopular{
+.accomodationandpopular{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -413,7 +413,7 @@ margin-right: 25px;
 .fa-chart-line{
     padding: 25px 10px 10px 10px;
 }
-/* cards containers 1 and 2 ( activity and popular)*/
+/* cards containers 1 and 2 ( accomodation and popular)*/
 
 /* activity container */
 
@@ -483,7 +483,7 @@ footer {
    
 }
 
-/* activity container */
+/* footer */
 
 /* responsive */
 
@@ -497,7 +497,7 @@ footer {
     .roundborder{
         margin-right: 16px;
     }
-    .activityandpopular{
+    .accomodationandpopular{
         flex-direction: column;       
     }
 
@@ -505,7 +505,7 @@ footer {
         max-width: 992px;    
     }
     
-    .rowtest {
+    .rowdiv {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -543,48 +543,22 @@ footer {
 
 @media screen and (max-width: 768px) {
 
-    body {
-        width: 103%;
-        margin: auto;        
-    }
+    .desktopfirst {
+        visibility: hidden;
+       }
+    
+       .mobilefirst {
+        visibility: visible;
+       }
+
+    /*header*/
 
    .headertop {
     flex-direction: column;
     align-items: center;
     margin-bottom: 0;    
    }
-
-   .desktopfirst {
-    visibility: hidden;
-   }
-
-   .mobilefirst {
-    visibility: visible;
-   }
-
-   .activityandpopular {
-    flex-direction: column-reverse;
-   }
-
-   .rowtest {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin:0;    
-   }
-
-   .activity {
-    display: flex;
-    flex-direction: column;
-    margin: 25px;
-   }
-
-   footer {
-    flex-direction: column;
-    height: fit-content;
-   }
-
-   /* nav menu */
+        /* nav menu */
   
    .menuborder {                         
 
@@ -625,7 +599,74 @@ footer {
         text-align: center;
     }
     
- 
+        /* nav menu */
+
+    /*header*/
+
+    /* accomodation and popular container */
+
+    .container1 {
+        background-color: #FFFFFF;
+        margin-top: 0;
+        border-radius:0 0 0 0;
+        min-width: 100%;
+        padding: 0;
+    }
+
+    .container2 {
+        border-radius:0 0 0 0;
+        min-width: 100%;
+        padding: 0;        
+    }
+
+   .accomodationandpopular {
+    flex-direction: column-reverse;
+   }
+
+   .rowdiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0;    
+   }
+
+        /* accomodation container */
+
+   .card {
+    width: 80vw;
+    height:30vh;
+    margin-bottom: 10px;
+    }
+
+    .card img {
+    width:97%;
+    height:18vh;
+    }
+
+        /* accomodation container */
+
+        /* most popular container */
+    
+   .populartop {
+    margin:0 40px 0 26px;
+    }
+
+    .popularcontainer {
+    width: 80vw;
+    height:24vh;
+    margin:0 0 10px 0;        
+    }
+
+    .popularcontainer img {
+    height:23vh;
+    width:35vw;
+    padding: 0;
+    margin: auto 0 auto 5px;
+    }
+
+        /* most popular container */
+
+    /* accomodation and popular container */
 
     /* slogan */
 
@@ -636,10 +677,10 @@ footer {
         align-items: flex-start;
     }
 
+    /* slogan */
    
     /* research tab */
  
-
     .formborderright { 
         display: flex;
         flex-direction: row-reverse;
@@ -661,10 +702,7 @@ footer {
         margin: auto;
     }
 
-    .popularcontainer {
-        width: 80vw;
-        margin:0 0 10px 0;        
-    }
+    /* research tab */
 
     /* filters*/
 
@@ -708,16 +746,15 @@ footer {
         transition: box-shadow 0.3s ease-in-out;  
     }
 
-    .card {
-        width: 80vw;
-        margin-bottom: 10px;
-    }
-
-    .card img {
-        width:97%;
-    }
+    /* filters*/
 
     /* activity container */
+
+    .activity {
+        display: flex;
+        flex-direction: column;
+        margin: 25px;
+       }
 
     .carddisplayactivity {
         flex-direction: column;
@@ -727,8 +764,8 @@ footer {
 
     .activitycardsbloc {
         
-        width: 100%;
-        height: 190px;
+        width: 80vw;
+        height: 30vh;
     }
 
     .activitycardsbloc img {
@@ -736,21 +773,14 @@ footer {
         height:80%;
     }
 
-    .container1 {
-        background-color: #FFFFFF;
-        margin-top: 0;
-        border-radius:0 0 0 0;
-        min-width: 100%;
-        padding: 0;
-    }
+    /* activity container */
 
-    .container2 {
-        border-radius:0 0 0 0;
-        min-width: 100%;
-        padding: 0;        
-    }
+    /* mobile footer*/
 
-        /* mobile footer*/
+    footer {
+        flex-direction: column;
+        height: fit-content;
+    }
 
     .footerblock {
         width:100%;
@@ -761,15 +791,11 @@ footer {
         margin: 25px 0 10px 0;
     }
 
-    .populartop {
-        margin:0 40px 0 26px;
-    }
-
     .footerblock a {
         padding-left: 0;
     }
-    
-        /* mobile footer*/
+
+    /* mobile footer*/
 
     /* Smartphone */
 }
