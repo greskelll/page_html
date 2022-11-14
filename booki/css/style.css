@@ -26,7 +26,6 @@ html, body {
 /* font */
 
 ul {
-
     list-style-type: none;
 }
 
@@ -38,7 +37,7 @@ h2 {
     font-size: 22px;
 }
 
-h3 {
+h3, form, input {
     font-size:18px;
 }
 
@@ -46,7 +45,7 @@ p {
     font-size: 16px;
 }
 
-main p{
+main p {
     font-size: 14px;
 }
 
@@ -54,7 +53,7 @@ li {
     font-size: 17px;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: clip;  /* prevent container stretch from long sentences */
+    text-overflow: clip;  /* prevent container stretching from long sentences */
 }
 
 a {
@@ -120,7 +119,7 @@ button {
 
 /* header */
 
-    /* site title and nav menu */
+    /* title and nav menu */
 
 .headertop {
     display: flex;
@@ -136,11 +135,9 @@ button {
 }
 
 .menuborder {                         
-
     border-top:transparent solid 2px;
-    padding-top: 32px;
+    padding: 32px 30px 0 0;
     margin-top: -16px;
-    padding-right:30px;
 }
 
 .menuborder:hover {
@@ -154,13 +151,13 @@ button {
     transition:0.3s ease-in-out
 }
 
-
 .hidden {
     visibility: hidden;
     width:0;
     height: 0;
 
 }
+
 .logo {
     width:61px;
     height:19px;
@@ -175,10 +172,10 @@ button {
     margin:0;
 }
 
-.catchphrase :nth-child(1){
+.catchphrase :nth-child(1) {
     margin-bottom: 5px;
 }
-.catchphrase :nth-child(2){
+.catchphrase :nth-child(2) {
     margin: 5px;
 }
 
@@ -189,9 +186,7 @@ button {
 .horizontalform {
     display: flex;
     flex-direction: row;
-    align-items: center;
-
-    
+    align-items: center;    
 }
 
 .formborderleft { 
@@ -199,10 +194,7 @@ button {
     border-radius: 15px 0 0 15px;
     background-color: var(--off-white-color);
     width: 50px;
-    line-height: 50%;
-    padding-top: 17px;
-    padding-bottom: 16px;
-    font-size:18px;
+    padding: 17px 0 16px 0;
 }
 
 .formborderright { 
@@ -215,7 +207,6 @@ button {
     color: white;
     font-weight:bold;
     width: 132px;
-    font-size:18px;
 }
 
 input {
@@ -224,10 +215,8 @@ input {
     border-bottom-style: solid;
     border-left-style: hidden;
     border-right-style: hidden;
-    border-top-color: var(--off-white-color);
-    border-bottom-color: var(--off-white-color);
-    padding-left:15px; 
-    font-size: 18px;  
+    border-color: var(--off-white-color);
+    padding-left:15px;   
     outline: none;
     font-weight:bold;
     font-family: 'Raleway', sans-serif;
@@ -266,10 +255,7 @@ input {
 .roundborder {
 border: 2px solid var(--light-grey-color);
 border-radius: 25px;
-padding-left: 24px;
-padding-right: 24px;
-padding-bottom: 12px;
-padding-top: 12px;
+padding: 12px 24px 12px 24px;
 font-weight: bold;
 display: flex;
 justify-content: center;
@@ -293,10 +279,7 @@ margin-right: 25px;
 .smallroundborder {
     border: 1px solid var(--light-grey-color);
     border-radius: 25px;
-    padding-top: 6px;
-    padding-right: 12px;
-    padding-bottom: 7px;
-    padding-left: 12px;
+    padding: 7px 12px 7px 12px;
     margin-right:10px;
 }
 
@@ -340,10 +323,9 @@ margin-right: 25px;
     width: 236px;
     height: 116px;
     object-fit: cover;
-    padding-top: 5px;
+    padding: 5px 0 0 5px;
     margin-bottom: -8px;
-    border-radius: 20px 20px 0 0; 
-    padding-left: 5px;     
+    border-radius: 20px 20px 0 0;     
 }
 .container {
     padding: 2px 16px;
@@ -357,7 +339,7 @@ margin-right: 25px;
 
 /* cards containers 1 and 2 (accomodation and popular) */
 
-/* container popular and accommodation for responsive display */
+    /* container popular and accommodation for responsive display */
 
 .accomodationandpopular{
     display: flex;
@@ -365,6 +347,8 @@ margin-right: 25px;
     justify-content: space-between;
     max-width:1339px;
 }
+
+    /* container popular and accommodation for responsive display */
 
     /* "most popular" container */
 
@@ -374,7 +358,7 @@ margin-right: 25px;
     justify-content: space-between;
 }
 
-.popularcontainer{
+.popularcontainer {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
     width: 343px;
     height: 144px;
@@ -382,7 +366,6 @@ margin-right: 25px;
     display:flex;
     flex-direction: row;
     margin-bottom: 28px;
-
 }
 
 .popularcontainer img {
@@ -403,23 +386,26 @@ margin-right: 25px;
     height: 136px;    
 }
 
-.containeralt h4{
+.containeralt h4 {
     font-size:16px;
     margin: 6px;
 }
 
-.containeralt p{
+.containeralt p {
     margin: 6px;
 }
 
-.containeralt .rating{
+.containeralt .rating {
     margin-bottom: 4px;
 }
 
 
-.fa-chart-line{
+.fa-chart-line {
     padding: 25px 10px 10px 10px;
 }
+
+    /* "most popular" container */
+
 /* cards containers 1 and 2 ( accomodation and popular)*/
 
 /* activity container */
@@ -468,8 +454,7 @@ footer {
     height:225px;
     margin-top: 60px;
     justify-content: flex-start;
-    align-items: center;
-    
+    align-items: center;    
 }
 
 .footerblock{
@@ -479,7 +464,7 @@ footer {
     padding-left: 30px;
 }
 
-.footerblock h3{
+.footerblock h3 {
     margin-left: 32px;
 }
 
@@ -498,13 +483,13 @@ footer {
 
 @media screen and (max-width: 992px) and (min-width:769px)
 {
-    ul.filtertab{
+    ul.filtertab {
         padding-left: 10px;
     }
-    .roundborder{
+    .roundborder {
         margin-right: 16px;
     }
-    .accomodationandpopular{
+    .accomodationandpopular {
         flex-direction: column;       
     }
 
@@ -512,7 +497,7 @@ footer {
         max-width: 992px;    
     }
     
-    .rowdiv {
+    .flexdiv {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -565,6 +550,7 @@ footer {
     align-items: center;
     margin-bottom: 0;    
    }
+
         /* nav menu */
   
    .menuborder {                         
@@ -596,12 +582,12 @@ footer {
         padding: 0;        
     }
     
-    .menu :nth-child(1){    
+    .menu :nth-child(1) {    
         width: 50%;
         text-align: center;
     }
 
-    .menu :nth-child(2){
+    .menu :nth-child(2) {
         width: 50%;
         text-align: center;
     }
@@ -630,7 +616,7 @@ footer {
     flex-direction: column-reverse;
    }
 
-   .rowdiv {
+   .flexdiv {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -687,26 +673,22 @@ footer {
     /* slogan */
    
     /* research tab */
+
+        /* swapping research button text with icon*/
  
     .formborderright { 
         display: flex;
         flex-direction: row-reverse;
-        align-items: center;
-        justify-content: flex-end;
         padding-left: 15px;
         height:51px;
         border-radius: 0 15px 15px 0;
         background-color: var(--main-color);
-        color: white;
-        font-weight:bold;
         width: 50px;
-        font-size:18px;
     }
+        /* swapping research button text with icon*/
 
     .horizontalform {
         justify-content: center;
-        max-width: 90%;
-        margin: auto;
     }
 
     /* research tab */
@@ -735,8 +717,7 @@ footer {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-right: 15px;
-    margin-bottom: 20px;
+    margin: 0 15px 20px 0;
     width: 30%;
     height:25px;
     font-size: 12px;
@@ -790,8 +771,7 @@ footer {
     }
 
     .footerblock {
-        width:100%;
-        margin:10px 0 30px 40px;
+        margin:auto;
     }
 
     .footerblock h3 {
