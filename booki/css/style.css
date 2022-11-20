@@ -26,8 +26,6 @@ html {
 	/* prevent horizontal scrolling */
 }
 
-/* font */
-
 ul {
 	list-style-type: none;
 }
@@ -88,15 +86,8 @@ button {
 	padding-left: 32px;
 }
 
-/* colors */
-
 .dark-blue {
 	color: var(--main-color);
-}
-
-.light-grey-background {
-	/*fond indiqué dans les recommandations mais pas celui sur figma */
-	background-color: var(--light-grey-color);
 }
 
 .grey-background {
@@ -257,6 +248,8 @@ input {
 	padding: 7px 12px 7px 12px;
 	margin-right: 10px;
 }
+
+/* main */
 
 .accomodation-and-popular-container {
 	display: flex;
