@@ -390,9 +390,10 @@ footer {
 	flex-direction: row;
 	max-width: 1339px;
 	height: 225px;
-	margin-top: 60px;
+	margin-top: 50px;
+	padding-top: 40px;
 	justify-content: flex-start;
-	align-items: center;
+	align-items: flex-start;
 }
 
 .footer-bloc {
