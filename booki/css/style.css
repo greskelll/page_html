@@ -484,20 +484,6 @@ footer {
 		margin-bottom: 0;
 	}
 
-	.menu-element {
-
-		border-bottom: var(--off-white-color) solid 3px;
-		border-top: none;
-		padding: 0 0 30px 0;
-		margin: 0;
-	}
-
-	.menu-element:hover {
-		border-bottom: var(--main-color) solid 3px;
-		color: var(--main-color);
-		border-top: none;
-	}
-
 	nav {
 		display: flex;
 		width: 100%;
@@ -518,53 +504,17 @@ footer {
 		text-align: center;
 	}
 
-	.accomodation-container {
-		background-color: #FFFFFF;
-		margin-top: 0;
-		border-radius: 0 0 0 0;
-		min-width: 100%;
-		padding: 0;
-	}
-
-	.popular-container {
-		border-radius: 0 0 0 0;
-		min-width: 100%;
-		padding: 0;
-	}
-
-	.accomodation-and-popular-container {
-		flex-direction: column-reverse;
-	}
-
-	.popular-card-display {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+	.menu-element {
+		border-bottom: var(--off-white-color) solid 3px;
+		border-top: none;
+		padding: 0 0 30px 0;
 		margin: 0;
 	}
 
-	.accomodation-card {
-		width: 80vw;
-		margin-bottom: 10px;
-	}
-
-	.accomodation-card img {
-		width: 97%;
-	}
-
-	.popular-container-head {
-		margin: 0 40px 0 26px;
-	}
-
-	.popular-card {
-		width: 80vw;
-		margin: 0 0 10px 0;
-	}
-
-	.popular-card img {
-		width: 35vw;
-		padding: 0;
-		margin: auto 0 auto 5px;
+	.menu-element:hover {
+		border-bottom: var(--main-color) solid 3px;
+		color: var(--main-color);
+		border-top: none;
 	}
 
 	.catchphrase {
@@ -624,6 +574,55 @@ footer {
 		background: #ffffff;
 		box-shadow: 0 2px 2px 2px #00000025;
 		transition: box-shadow 0.3s ease-in-out;
+	}
+
+	.accomodation-and-popular-container {
+		flex-direction: column-reverse;
+	}
+
+	.accomodation-container {
+		background-color: #FFFFFF;
+		margin-top: 0;
+		border-radius: 0 0 0 0;
+		min-width: 100%;
+		padding: 0;
+	}
+
+	.accomodation-card {
+		min-width: 80vw;
+		margin-bottom: 10px;
+	}
+
+	.accomodation-card img {
+		min-width: 97%;
+	}
+
+	.popular-container {
+		border-radius: 0 0 0 0;
+		min-width: 100%;
+		padding: 0;
+	}
+
+	.popular-container-head {
+		margin: 0 40px 0 26px;
+	}
+
+	.popular-card-display {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 0;
+	}
+
+	.popular-card {
+		width: 80vw;
+		margin: 0 0 10px 0;
+	}
+
+	.popular-card img {
+		width: 35vw;
+		padding: 0;
+		margin: auto 0 auto 5px;
 	}
 
 	.activity-container {
